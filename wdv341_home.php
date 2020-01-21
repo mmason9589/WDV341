@@ -17,6 +17,10 @@
 	
 	
 ?>	
+	
+<h3>Assignments:</h3>
+	
+<p>Unit 2: <a href="phpbasics.php">PHP Basics</a></p>
 
 	
 </body>
