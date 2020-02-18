@@ -22,10 +22,6 @@
 	
 <p>Unit 2: <a href="phpbasics.php">PHP Basics</a></p>
 	
-<p>Project: <a href="testEmail.php">PHP Emailer</a></p>
-	
-<p>Unit 3: <a href="unit3_phpFunctions.php">PHP Function</a></p>
-	
 <br>
 	
 <p><a href="../../index.html">Return to Matt's Homepage</a></p>
