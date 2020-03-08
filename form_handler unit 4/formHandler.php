@@ -20,13 +20,6 @@
 //-------------------------------------------------------------
 //How to loop through animal array in loop above??
 	
-	foreach($_POST["animal"] as $inAnimal)
-	{
-		$tableBody .= "<tr>";
-		$tableBody .= "<td>animal</td>";
-		$tableBody .= "<td>$inAnimal</td>";
-		$tableBody .= "</tr>";
-	}
 
 
 
@@ -39,7 +32,8 @@
 	$inLastName = $_POST["lastName"];		//Get the value entered in the last name field
 	$inSchool = $_POST["school"];			//Get the value entered in the school field
 	$inResident = $_POST["resident"];		//Get the value selected in the location field
-	$inAnimal = $_POST["animal"];			//Get the value selected in the education field
+	$inCat = $_POST["checkCat"];			//Get the value selected in the cat field
+	$inDog = $_POST["checkDog"];			//Get the value selected in the dog field
 	$inSports = $_POST["sports"];			//Get the value selected in the sports field
 	
 	
@@ -72,16 +66,12 @@
 <p>Last Name: <?php echo $inLastName; ?></p>
 <p>Sport: <?php echo $inSports; ?></p>
 <p>Location: <?php echo $inResident; ?></p>
-<p>Animal: <br>
-	
-	<?php 
-		foreach($_POST["animal"] as $inAnimal)
-		{
-			echo $inAnimal . "<br>";
-		}
+<p>Animal:  <?php echo $inCat; ?><?php echo $inDog; ?><br>
 	
 	
-	?></p>
+	
+
+</p>
 <p>
 	
 <p>
