@@ -564,7 +564,7 @@ validateThreeWords
 		<td><input type="submit" id="submitBio" name="submitBio" value="Submit Bio" /></td>
 		</tr>
 		<tr>
-		<td><input type="reset" id="resetBio" name="resetBio" onClick="resetForm()" value="Reset Bio"/></td>
+			<td><button id="resetBio" name="resetBio" onClick="resetForm()" value="Reset Bio"/>Reset</button></td>
 		</tr>
 		</table>
 	</form>
