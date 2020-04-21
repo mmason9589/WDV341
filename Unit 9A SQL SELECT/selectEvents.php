@@ -13,10 +13,10 @@ try {
 	  $sql .= "event_description, ";
 	  $sql .= "event_presenter, ";
 	  $sql .= "event_date, ";
-	  $sql .= "event_time, ";
+	  $sql .= "event_time ";
 	  $sql .= "FROM wdv341_event";
 	  
-	  $sql = "SELECT event_name, event_description, event_presenter, event_date, event_time FROM wdv341_event";	
+	  //$sql = "SELECT event_name, event_description, event_presenter, event_date, event_time FROM wdv341_event" ;	
 		
 	  //PREPARE the SQL statement
 	  $stmt = $conn->prepare($sql);
