@@ -93,7 +93,7 @@ session_start();
 	
 	<?php } ?>
 	
-	<li><a href="recipeProjectNews.php">Newsletter</a></li>
+	<li><a href="recipeProjectNews.php">Questions</a></li>
 	<li><a href="recipeUserRecipes.php">User Recipes</a></li>
 	
 	<?php if(isset($_SESSION["validUser"])  &&  $_SESSION["validUser"] == "yes" ){ ?>

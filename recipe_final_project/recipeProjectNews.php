@@ -5,34 +5,82 @@ session_start();
 	$validForm = "";
 	$emailFail = "";
 	$emailSuccess = "";
+	$name = "";
+	$question = "";
+	$toEmail = "";
+	$errQuestion = "";
+	$errName = "";
 	
 
 	if(isset($_POST['emailSubmit'])){
 		
 		
 		
+		
+		$name = $_POST['memName'];
+		$question = $_POST['memQuestion'];
+		
 		$toEmail = $_POST['email'];	//pull email address from the form data  || will send the email to the email address entered on the form
 		
-		$subject = "RECIPES Newsletter";	//This is the message that will be sent back to the person who sent you a message from your contact form.
-		$subjectInterest = "New Interest";
+		$subject = "RECIPES: Questions";	//This is the message that will be sent back to the person who sent you a message from your contact form.
+		$subjectQuestion = "New Question";
 		
-		$emailBody = "Thank you for taking an interest in our Newsletter. You will be receiving our latest issue soon!";
-		$emailBodyInterest = "$toEmail has taken interest in our Newsletter.";
+		$emailBody = "Thank you for your questions, we will get back to you as soon as possible!
+					  $question";
+		
+		
+		$emailBodyQuestion = "$name has a question they need answered.
+							  $toEmail
+							  $question";
 		
 		$fromEmail = "mmason@designdefined.org";		//email address is coming from
 		
 		$headers = "From: $fromEmail" . "\r\n";
 		
 		
+		//validate name field
+		function validateName($inName){
+			global $validForm, $errName;
+			$errName = "";
+			
+			if(!preg_match("/^[a-zA-Z ]*$/", $inName)){
+				$validForm = false;
+				
+				$errName = "<span class='errStyle' style='margin-left: 160px; color: red';>Only letters and white spaces allowed</span>";
+			}
+			else if($inName == ""){
+				$validForm = false;
+				$errName = "<span class='errStyle' style='margin-left: 160px; color: red'>Field can not be blank</span>";
+			}
+			
+		}
+		
 		//validate email address
 		function validateEmail($inEmail){
 			global $validForm, $emailFail;
 			$emailFail = "";
 			
-			if(!preg_match("/^[^\s@]+@[^\s@]+\.[^\s@]+$/",$inEmail)){
+			if($inEmail == ""){
 				$validForm = false;
 				
-				$emailFail = "Not a valid email address.";
+				$emailFail = "<span style='color: red; margin-left: 160px;'>Please enter an email address</span>";
+			}
+			elseif(!preg_match("/^[^\s@]+@[^\s@]+\.[^\s@]+$/",$inEmail)){
+				$validForm = false;
+				
+				$emailFail = "<span style='color: red; margin-left: 160px;'>Not a valid email address.</span>";
+			}
+			
+		}
+		
+		//validate name field
+		function validateQuestion($inQuestion){
+			global $validForm, $errQuestion;
+			$errQuestion = "";
+			
+			if($inQuestion == ""){
+				$validForm = false;
+				$errQuestion = "<span class='errStyle' style='margin-left: 160px; color: red'>Please ask a question</span>";
 			}
 			
 		}
@@ -40,7 +88,9 @@ session_start();
 		
 		$validForm = true;
 		
+		validateName($name);
 		validateEmail($toEmail);
+		validateQuestion($question);
 		
 		if($validForm){
 		
@@ -52,7 +102,7 @@ session_start();
 					
 						//sends emnail to the host account that someone has taken interest
 						//includes their email
-						mail($fromEmail,$subjectInterest,$emailBodyInterest,$headers);
+						mail($fromEmail,$subjectQuestion,$emailBodyQuestion,$headers);
 
 						//echo $emailBodyInterest;
 					} 
@@ -64,6 +114,7 @@ session_start();
 		
 				
 	}
+
 
 
 ?>
@@ -111,7 +162,7 @@ session_start();
 	
 	<?php } ?>
 	
-	<li><a href="recipeProjectNews.php"  style="color: #000000">Newsletter</a></li>
+	<li><a href="recipeProjectNews.php"  style="color: #000000">Questions</a></li>
 	<li><a href="recipeUserRecipes.php">User Recipes</a></li>
 	
 	<?php if(isset($_SESSION["validUser"])  &&  $_SESSION["validUser"] == "yes" ){ ?>
@@ -126,19 +177,32 @@ session_start();
 	
 	<hr style="margin-top: -35px; margin-bottom: 130px">
 	
-<p class="fillOut" >Enter your email address below to sign up for our free Newsletter!</p>
-	<p align="center" style="color: red"><?php echo $emailFail?></p>
+<p id="recTitle">Ask us a Question!</p>
+	
 	<p align="center" style="color: green"><?php echo $emailSuccess; ?></p>
 	
 	<div id="formcontainer">
 	<form id="contact_form" method="post" action="recipeProjectNews.php">
 	
 
-		<fieldset1>
+		<fieldset1><?php echo $errName ?>
+			<div style="margin-left: 53px;">
+				<label for="memName">Name</label>
+				<input id="memName" name="memName" type="text" style="width: 300px;" value="<?php echo $name ?>">
+			</div>
+			<br>
+			<?php echo $emailFail?>
 			<div>
 				<label for="email">Email Address</label>
-				<input id="email" name="email" type="text" >
+				<input id="email" name="email" type="text" style="width: 300px;" value="<?php echo $toEmail ?>">
 			</div>
+			<br>
+			<?php echo $errQuestion ?>
+			<div style="margin-left: 0px;">
+				<label for="memQuestion">Question</label>
+				<textarea style="resize: vertical" rows="3" cols="29" name="memQuestion" form="contact_form"><?php echo $question ?></textarea>
+			</div>
+			
 			
 		</fieldset1>
 		

@@ -201,7 +201,7 @@ $errImage = "";
 			global $validForm, $errRecipeInstruct;
 			$errRecipeInstruct = "";
 			
-			if(!preg_match("/^[a-zA-Z 1-9,]*$/", $inInstruct[0])){
+			if(!preg_match("/^[a-zA-Z 1-9,.]*$/", $inInstruct[0])){
 				$validForm = false;
 				
 				$errRecipeInstruct = "<span class='errStyle' style='margin-left: 130px; margin-top:20px; position: absolute;'>Only letters, numbers, spaces and commas allowed</span>";
@@ -431,7 +431,7 @@ $errImage = "";
 	
 	<?php } ?>
 	
-	<li><a href="recipeProjectNews.php">Newsletter</a></li>
+	<li><a href="recipeProjectNews.php">Questions</a></li>
 	<li><a href="recipeUserRecipes.php">User Recipes</a></li>
 	
 	<?php if(isset($_SESSION["validUser"])  &&  $_SESSION["validUser"] == "yes" ){ ?>

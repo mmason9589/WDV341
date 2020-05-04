@@ -74,7 +74,7 @@ include 'userRecipe.php';
 		}else{
 	?>
 	<?php } ?>
-	<li><a href="recipeProjectNews.php">Newsletter</a></li>
+	<li><a href="recipeProjectNews.php">Questions</a></li>
 	<li><a href="recipeUserRecipes.php" style="color: #000000">User Recipes</a></li>
 	<?php if(isset($_SESSION["validUser"])  &&  $_SESSION["validUser"] == "yes" ){ ?>
 	<li><a href="logout.php">Logout</a></li><p style="display: inline"><span class="vl">&nbsp;&nbsp;Welcome, <?php echo $_SESSION['user']; ?>&nbsp;&nbsp;</span></p>

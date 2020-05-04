@@ -6,7 +6,7 @@
 
 				background-color: #E8E6E3;
 
-				width: 500px;
+				width: 550px;
 
 				margin: 10px auto;
 
@@ -105,11 +105,9 @@ input[type=submit]  {
 					margin-left: 255px;
 
 					}
-
-.fillOut{
-	font-size: 22px;
+#recTitle{
+	font-size: 40px;
 	text-align: center;
-
+	
 }
-
 		
