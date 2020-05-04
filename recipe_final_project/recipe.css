@@ -1,0 +1,315 @@
+	html{
+		scroll-behavior: smooth;
+	}
+
+	body, input[type=submit], input[type=reset] {
+		margin: 0;
+		font-family: 'Barlow Condensed', sans-serif;
+		font-size: 18px;
+		
+	}
+
+	hr {
+		display: block;
+		border: 1px solid #AFAFAF;
+		margin-bottom: 0.5em;
+	 	margin-left: auto;
+		margin-right: auto;
+		width: 1100px;
+		margin-top: 130px;
+	}
+
+
+	img {
+		display: block;
+		width:  260px;
+		height: 150px;
+		border-top-left-radius:  10px;
+		border-top-right-radius:  10px;
+	}
+
+	header img {
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 11px;
+		width: 1100px;
+		height: auto;
+	}
+
+	
+
+	figure h3, p{
+
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+
+	.flex-container{
+		margin-left: 130px;
+		width: 1400px;
+		justify-content: center;
+		display: flex;
+		flex-wrap:wrap;
+		flex-direction: row;
+	}
+	
+	.flex-container > figure {
+		border-top-right-radius: 7px;
+		border-top-left-radius: 7px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 260px;
+		margin: 20px;
+		padding-bottom: 20px;
+		box-shadow: 1px 2px 2px;
+		cursor: pointer;
+		
+	}
+
+
+
+	.recipeflex{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			flex-direction:row;
+			min-width: 1000px;
+			margin: 10px;
+			margin-top: 55px;
+	}
+
+	.recipeflex > recipefigure{
+
+	}
+
+	recipefigure{
+			flex-wrap: wrap;
+			flex-direction: row;
+			text-align: left;
+			background-color: white;
+			border: 5px;
+			padding: 50px;
+			margin: 15px;
+			width: 900px;
+			line-height: 1.4;
+	}
+
+
+	recipefigure img{
+		float: right;
+		height: 300px;
+		width: 520px;
+		border-top-left-radius: 0px;
+		border-top-right-radius: 0px;
+		padding-left: 30px;
+		padding-bottom: 30px;
+	}
+
+	h1 {
+		text-align: center;
+		padding: 25px;
+		}
+
+	figure{
+		text-align: left;
+		background-color:#F2F1EF;
+		border: 5px;
+		padding: 0px;
+		margin: 15px;
+		width: 270px;
+		
+	}	
+
+	figure:hover{
+		background-color:#FFE678;
+		box-shadow: 4px 4px 4px;
+	}
+
+
+.errMsg{
+	text-align: center;
+	
+}
+
+.emailErr{
+	
+	text-align: center;
+	color: red;
+}
+
+.recTitle{
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 70px;
+	margin-top: -20px;
+	
+}
+
+
+.vl{
+	border-left: 2px solid #AFAFAF;
+	border-right: 2px solid #AFAFAF;
+}
+
+
+	/*---------toggle switch----------*/
+
+
+.switch {
+	 margin-left: 3px;
+	 position: relative;
+	 display: inline-block;
+	 width: 39px;
+	 height: 25px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(14px);
+  -ms-transform: translateX(14px);
+  transform: translateX(14px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/*----------nav bar---------- */
+
+
+nav  {
+	font-size: 22px;
+	background-color: white;
+	text-align: center;
+	padding: 1px;
+	padding-bottom: 60px;
+	margin-top: 15px;
+	
+	/*border-left: 12px solid blue;*/
+	  }
+
+nav li {
+		display: inline;
+	    padding-right:35px;
+		}
+
+nav a  {
+		color:#AFAFAF;
+		text-decoration:none;
+		}
+
+nav a:hover {
+		color: black;
+		
+			}
+
+
+/* -------Form--------  */
+
+
+.formStyle {
+	padding-top: 15px;
+	background-color:#E8E6E3 ;
+	/*background-color:#FFEC9C;*/
+	font-size: 24px;
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 430px;
+	box-shadow: 2px 2px 2px;
+	border-radius: 5px;
+		
+	}
+
+input[type=text], [type=password] {
+	
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  margin-right: 30px;
+	
+}
+
+
+.col-25 {
+  float: left;
+  width: 30%;
+  margin-top: 6px;
+}
+
+
+
+#loginSubmit{
+  font-size: 17px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 11%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+input[type=reset]:hover{
+	background-color: #45a049;
+}
+
+
+
+

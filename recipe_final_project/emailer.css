@@ -1,0 +1,115 @@
+	#formcontainer  {
+		
+				box-shadow: 2px 2px 2px;
+		
+				border-radius: 5px;
+
+				background-color: #E8E6E3;
+
+				width: 500px;
+
+				margin: 10px auto;
+
+				padding-top: 20px;
+		
+				padding-bottom: 20px;
+
+				margin-top: 25px;
+		
+				margin-bottom: 50px;
+
+				
+
+				}
+
+fieldset1  {
+
+	text-align: center;
+			}
+
+			
+
+fieldset1 div  {
+		font-size: 20px;
+
+				}
+
+				
+
+fieldset2  {
+
+			width: 25em;
+
+			margin: 20px;
+
+			}
+
+			
+
+fieldset2 div  {
+
+				margin-bottom: 10px;
+
+				padding-bottom: 10px;
+
+				
+				}
+
+input, textarea, select  {
+
+						 font-size: 1.1em;
+
+						 padding: 2px 5px 4px;
+
+						 border-radius: 5px;
+
+						 margin-top:5px;
+
+						 order:2;
+
+						 flex: 1 1 auto;
+
+						}
+
+label  {
+
+		order: 1;
+
+		width: 10em;
+
+		text-align: right;
+
+		padding-right: 0.5em;
+
+		}
+
+		
+
+input[type=submit], input[type=reset] {
+  margin-top: 8px;
+  font-size: 17px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-right: 11%;
+ 
+}
+								
+
+input[type=submit]  {
+
+					margin-left: 255px;
+
+					}
+
+.fillOut{
+	font-size: 22px;
+	text-align: center;
+
+}
+
+		
